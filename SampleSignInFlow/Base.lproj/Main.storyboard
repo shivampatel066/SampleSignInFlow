@@ -109,6 +109,96 @@
             </objects>
             <point key="canvasLocation" x="128.98550724637681" y="93.75"/>
         </scene>
+        <!--VerifyOTP View Controller-->
+        <scene sceneID="MHk-6m-jkg">
+            <objects>
+                <viewController storyboardIdentifier="VerifyOTPViewController" id="sYw-f7-ZUh" customClass="VerifyOTPViewController" customModule="SampleSignInFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bof-UJ-ivo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="haT-su-Ka7">
+                                <rect key="frame" x="41.5" y="44" width="331" height="283"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="vqN-jS-VOt">
+                                <rect key="frame" x="41.5" y="335" width="331" height="226"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Your Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qie-6O-uuB">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="60"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="OTP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5B-Eu-cjw">
+                                        <rect key="frame" x="0.0" y="83" width="331" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Zsr-2k-1ZC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdK-os-7hq">
+                                        <rect key="frame" x="0.0" y="166" width="331" height="60"/>
+                                        <color key="backgroundColor" red="0.31372550129999999" green="0.59607845540000004" blue="0.42745098469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Verify">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tappedVerifyButton:" destination="sYw-f7-ZUh" eventType="touchUpInside" id="WjD-CT-Dzo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jho-XK-nxb">
+                                <rect key="frame" x="64" y="581" width="286" height="14.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resend OTP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpJ-pB-8cY" userLabel="shivampatel066@gmail.com">
+                                        <rect key="frame" x="0.0" y="0.0" width="286" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.31372550129999999" green="0.59607845540000004" blue="0.42745098469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="BpJ-pB-8cY" firstAttribute="width" secondItem="Jho-XK-nxb" secondAttribute="width" id="7Yw-h5-DPC"/>
+                                    <constraint firstItem="BpJ-pB-8cY" firstAttribute="centerX" secondItem="Jho-XK-nxb" secondAttribute="centerX" id="VwE-aY-3mc"/>
+                                    <constraint firstAttribute="trailing" secondItem="BpJ-pB-8cY" secondAttribute="trailing" id="lX1-o7-aLi"/>
+                                    <constraint firstItem="BpJ-pB-8cY" firstAttribute="centerY" secondItem="Jho-XK-nxb" secondAttribute="centerY" id="mM3-h7-MJ8"/>
+                                    <constraint firstItem="BpJ-pB-8cY" firstAttribute="top" secondItem="Jho-XK-nxb" secondAttribute="top" id="p6w-WB-GEU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KcA-Zt-cdR"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vqN-jS-VOt" firstAttribute="centerY" secondItem="bof-UJ-ivo" secondAttribute="centerY" id="JhA-CN-we7"/>
+                            <constraint firstItem="vqN-jS-VOt" firstAttribute="top" secondItem="haT-su-Ka7" secondAttribute="bottom" constant="8" symbolic="YES" id="Qtg-Bq-rye"/>
+                            <constraint firstItem="Jho-XK-nxb" firstAttribute="top" secondItem="vqN-jS-VOt" secondAttribute="bottom" constant="20" id="Vo4-jk-YyT"/>
+                            <constraint firstItem="haT-su-Ka7" firstAttribute="centerX" secondItem="bof-UJ-ivo" secondAttribute="centerX" id="Wm6-IQ-ccJ"/>
+                            <constraint firstItem="Jho-XK-nxb" firstAttribute="centerX" secondItem="bof-UJ-ivo" secondAttribute="centerX" id="coI-Cf-1gd"/>
+                            <constraint firstItem="haT-su-Ka7" firstAttribute="top" secondItem="KcA-Zt-cdR" secondAttribute="top" id="g4H-NE-KrR"/>
+                            <constraint firstItem="vqN-jS-VOt" firstAttribute="centerX" secondItem="bof-UJ-ivo" secondAttribute="centerX" id="h7k-LK-9r9"/>
+                            <constraint firstItem="haT-su-Ka7" firstAttribute="width" secondItem="vqN-jS-VOt" secondAttribute="width" id="hE3-GX-MOX"/>
+                            <constraint firstItem="vqN-jS-VOt" firstAttribute="width" secondItem="bof-UJ-ivo" secondAttribute="width" multiplier="0.8" id="hJj-m3-FaB"/>
+                            <constraint firstItem="Jho-XK-nxb" firstAttribute="width" secondItem="vqN-jS-VOt" secondAttribute="width" multiplier="0.864048" id="nGg-rt-gKY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="OTPTextField" destination="l5B-Eu-cjw" id="dTu-wx-cnz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YpU-Fe-ULs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826" y="94"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logo" width="609" height="466"/>

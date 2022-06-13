@@ -8,7 +8,7 @@
 import UIKit
 
 class SignInUserViewController: UIViewController {
-
+    
     
     @IBOutlet weak var emailTF: UITextField!
     
@@ -20,18 +20,26 @@ class SignInUserViewController: UIViewController {
         
     }
     
-
+    
     @IBAction func tappedOnContinueButton(_ sender: Any) {
-        if let text = emailTF.text {
-            APIHelper.shareInstance.onPostToAPI(email: text) {
-                (response:UserResponse) in
-                if let response = response.results {
-                    if response.isLogin {
-                        //Move to second Screen along with device token
+        
+        APIHelper.shareInstance.onPostToAPIEmailVerify(email: emailTF.text ?? "") {
+            (response:UserResponse) in
+            let responseResult = response.results
+            if responseResult.isLogin {
+                //Move to second Screen along with device token
+                DispatchQueue.main.async {
+                    if let vc = self.storyboard?.instantiateViewController(withIdentifier: "VerifyOTPViewController") as? VerifyOTPViewController {
+                        vc.email = self.emailTF.text
+                        vc.response = response
+                        self.present(vc, animated: true, completion: nil)
                     }
                 }
+                
             }
+            
         }
+        
     }
 }
 
